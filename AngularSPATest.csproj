@@ -11,6 +11,7 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +26,8 @@
   <ItemGroup>
     <None Remove="ClientApp\app\components\editContact\editContact.component.ts" />
     <None Remove="ClientApp\app\components\newContact\newContact.component.ts" />
+    <None Remove="ClientApp\app\providers\contact-type.ts" />
+    <None Remove="ClientApp\app\providers\services.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +35,8 @@
     <TypeScriptCompile Include="ClientApp\app\components\contact\contact.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\editContact\editContact.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\newContact\newContact.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\providers\contact-type.ts" />
+    <TypeScriptCompile Include="ClientApp\app\providers\services.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

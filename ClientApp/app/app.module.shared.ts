@@ -13,6 +13,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ContactDetailComponent } from './components/contactDetail/contactDetail.component';
 import { NewContactComponent } from './components/newContact/newContact.component';
 import { EditContactComponent } from './components/editContact/editContact.component';
+import { ContactService } from './providers/services';
+import { Contact } from './providers/contact-type';
 
 
 @NgModule({
@@ -27,12 +29,13 @@ import { EditContactComponent } from './components/editContact/editContact.compo
         NewContactComponent,
         EditContactComponent
     ],
+    providers: [ContactService],
     imports: [
         CommonModule,
         HttpModule,
         FormsModule,
         RouterModule.forRoot([
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
+            { path: '', redirectTo: 'contact', pathMatch: 'full' },
             //{ path: 'home', component: HomeComponent },
             //{ path: 'counter', component: CounterComponent },
             //{ path: 'fetch-data', component: FetchDataComponent },
